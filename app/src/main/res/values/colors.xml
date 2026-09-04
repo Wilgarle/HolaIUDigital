@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta de colores principal para la interfaz grafica -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="light_blue">#F0F8FF</color>
+    <color name="blue_primary">#0056B3</color>
+    <color name="blue_secondary">#6699CC</color>
+    <color name="dark_blue">#003366</color>
+    <color name="gray_hint">#757575</color>
+</resources>

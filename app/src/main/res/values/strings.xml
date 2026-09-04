@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HolaIUDigital</string>
+    <string name="hint_escribe_mensaje">Escribe tu mensaje aquí...</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="tv_estado_inicial">Estado: Esperando envío...</string>
+    <string name="tv_esperando_mensaje">Esperando mensaje...</string>
+    <string name="btn_recibido">Recibido</string>
+    <string name="btn_cancelado">Cancelado</string>
+    <string name="cd_logo_main">Logo del sistema de mensajería principal</string>
+    <string name="cd_logo_activity2">Logo de recepción de mensajes</string>
+</resources>

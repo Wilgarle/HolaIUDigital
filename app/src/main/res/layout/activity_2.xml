@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".Activity2">
+
+    <!-- Logo representativo de la segunda pantalla -->
+    <ImageView
+        android:id="@+id/ivLogoActivity2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/cd_logo_activity2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_logo_activity2" />
+
+    <!-- Vista de texto principal para mostrar el mensaje transferido desde MainActivity -->
+    <TextView
+        android:id="@+id/tvMensajeRecibido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/tv_esperando_mensaje"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Estructura horizontal contenedora para distribución equitativa de botones mediante pesos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Botón de confirmación con peso distribuido -->
+        <Button
+            android:id="@+id/btnRecibido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue_primary"
+            android:text="@string/btn_recibido"
+            android:textColor="@color/white" />
+
+        <!-- Botón de cancelación con peso distribuido -->
+        <Button
+            android:id="@+id/btnCancelado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue_secondary"
+            android:text="@string/btn_cancelado"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>
