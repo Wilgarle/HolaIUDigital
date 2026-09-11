@@ -1,58 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- Logo representativo de la pantalla principal -->
-    <ImageView
-        android:id="@+id/ivLogoMain"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/cd_logo_main"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_logo_main" />
-
-    <!-- Campo de texto para el ingreso del mensaje por parte del usuario -->
-    <EditText
-        android:id="@+id/etMensaje"
+    <!-- Cabecera superior alineando el botón de historial a la derecha con margen superior para evitar el notch -->
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/blue_primary"
-        android:hint="@string/hint_escribe_mensaje"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
-        android:maxLines="3"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_hint" />
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp">
 
-    <!-- Boton para la ejecucion del envio de datos a la segunda actividad -->
-    <Button
-        android:id="@+id/btnEnviar"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:contentDescription="@string/cd_btn_historial"
+            android:src="@drawable/ic_historial"
+            app:backgroundTint="@color/blue_primary"
+            app:fabCustomSize="48dp"
+            app:tint="@color/white" />
+
+    </FrameLayout>
+
+    <!-- Contenedor central principal con distribución orientada verticalmente -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/blue_primary"
-        android:text="@string/btn_enviar"
-        android:textColor="@color/white" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
 
-    <!-- Componente de texto para visualizar el estado de la respuesta recibida -->
-    <TextView
-        android:id="@+id/tvEstado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_estado_inicial"
-        android:textColor="@color/dark_blue"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        <!-- Logo representativo de la pantalla principal -->
+        <ImageView
+            android:id="@+id/ivLogoMain"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/cd_logo_main"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_logo_main" />
+
+        <!-- Campo de texto para el ingreso del mensaje por parte del usuario -->
+        <EditText
+            android:id="@+id/etMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/blue_primary"
+            android:hint="@string/hint_escribe_mensaje"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_hint" />
+
+        <!-- Botón para la ejecución del envío de datos a la segunda actividad -->
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/blue_primary"
+            android:text="@string/btn_enviar"
+            android:textColor="@color/white" />
+
+        <!-- Componente de texto para visualizar el estado de la respuesta recibida -->
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_estado_inicial"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </LinearLayout>

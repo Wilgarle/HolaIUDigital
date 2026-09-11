@@ -8,4 +8,8 @@
     <string name="btn_cancelado">Cancelado</string>
     <string name="cd_logo_main">Logo del sistema de mensajería principal</string>
     <string name="cd_logo_activity2">Logo de recepción de mensajes</string>
+    <string name="cd_btn_historial">Abrir historial de mensajes</string>
+    <string name="cd_btn_volver">Volver a la pantalla anterior</string>
+    <string name="titulo_historial">Historial de Mensajes</string>
+    <string name="tv_historial_vacio">No hay mensajes registrados en el historial de la sesión actual.</string>
 </resources>
